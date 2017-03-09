@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Welcome to Payment Demo</h1>
+  <br/>
+  <h3>Please login.</h3>
+    <br/>
+    <form method="post" action="">
+      <p>{{ form.name.label }} {{ form.name }}{{ form.password.label }} {{ form.password }}<br/><input type="submit" value="Submit"></p>
+    </form>
+    <p><em>If you don't have account </em><a href="/register">Please sign up</a></p>
+{% endblock %}

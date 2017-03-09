@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Welcome</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    <style> body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    /* Custom container */
+    .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+    }
+    .container-narrow > hr {
+        margin: 30px 0;
+    }
+    .flash          { background: #CEE5F5; padding: 0.5em; }
+    .error          { background: #F0D6D6; padding: 0.5em; }
+  </style>
+</head>
+<body>
+  <div class="container-narrow">
+    <div class="masthead">
+      <ul class="nav nav-pills pull-right">
+        <li><a href="/">Home</a></li>
+        {% if session['logged_in'] %}
+          <li><a href="/logout">Sign Out</a></li>
+        {% else %}
+          <li><a href="/">Sign In</a></li>
+          <li><a href="/register">Register</a></li>
+        {% endif %}
+      </ul>
+    <h3><span class="fui-settings-16 muted">6998 Project 1</span></h3>
+  </div>
+  <hr>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div><br/>
+  {% endfor %} {% if error %}
+  <div class="error"><strong>Error:</strong> {{ error }}</div>{% endif %} {% block content %} {% endblock %}
+  <hr>
+  <div class="footer">
+    <p>COMSE6998 Mondern *-as-a-Service Applications Project<br>Deyang Yin, Yuan Tian, Xiangyu Zeng, Tianrou Wang, Jisong Liu.</p>
+  </div>
+</div>

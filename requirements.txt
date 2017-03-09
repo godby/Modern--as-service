@@ -1,0 +1,17 @@
+appdirs==1.4.2
+Flask==0.10.1
+Flask-SQLAlchemy==0.16
+Flask-WTF==0.8.4
+Flask-JWT==0.3.2
+itsdangerous==0.22
+Jinja2==2.7
+MarkupSafe==0.18
+packaging==16.8
+PyJWT==1.4.2
+pyparsing==2.1.10
+requests==2.13.0
+six==1.10.0
+SQLAlchemy==0.8.2
+stripe==1.19.1
+Werkzeug==0.9.1
+WTForms==1.0.4

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    h1 {
+    color: black;
+    font-family: arial;
+    font-size: 20pt;
+
+    }
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+    p {
+    border: 1px solid powderblue;
+    padding: 20px;
+    }
+</style>
+  <h1>Welcome to Payment Demo</h1>
+  <br/>
+    <article>
+      <label>
+          <dev>These are the details of the foundation products</dev></br>
+
+        <img src= "https://s3-us-west-2.amazonaws.com/modern-service/static/1_Clinique_lipstick.jpg"  width="300" height="200" border="0">
+        <p><font size="3" color="black">
+      Product name: lipstick<br>
+      Supplied by: Clinique<br>
+      Price: 12</font><br></p>
+          <img src= "https://s3-us-west-2.amazonaws.com/modern-service/static/2_ENERGIE_lotion.jpg"  width="300" height="200" border="0">
+        <p><font size="3" color="black">
+      Product name: lotion<br>
+      Supplied by: ENERGIE<br>
+      Price: 7</font><br></p>
+          <img src=  "https://s3-us-west-2.amazonaws.com/modern-service/static/3_EsteeLauder_foundation.jpg"  width="300" height="200" border="0">
+        <p><font size="3" color="black">
+      Product name: foundation<br>
+      Supplied by: Estee Lauder<br>
+      Price: 9</font><br></p>
+      </label>
+    </article>
+    <p>Please Select Products You Want to Buy</p>
+    <form method="POST" action="/order">
+        <input type="checkbox" name="productlist" value="12"/><font size="3" color="black">Clinique lipstick</font><br />
+        <input type="checkbox" name="productlist" value="7"/><font size="3" color="black">ENERGIE lotion</font><br />
+        <input type="checkbox" name="productlist" value="9"/><font size="3" color="black">Estee Lauder foundation</font><br />
+      <p><button name="pay" type="submit"  value={{ cid }}>submit</button> </p>
+  </form>
+  <div>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+  </div>
+  <br/>
+
+{% endblock %}

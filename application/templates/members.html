@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Welcome to Payment Demo</h1>
+  <br/>
+  <form action="/charge" method="post">
+    <article>
+      <label>
+        <p>Please pay your balance. It's {{totalprice}}<p/>
+      </label>
+    </article>
+    <script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
+            data-key="{{ key }}"
+            data-description="A Flask Charge"
+            data-amount="{{totalprice*100}}">
+    </script>
+  </form>
+  <br/>
+ <ul>
+   <li>Credit card number: 4242-4242-4242-4242</li>
+   <li>CVC: 3-digit number</li>
+   <li>Expiration date: MM/YY</li>
+ </ul>
+{% endblock %}
