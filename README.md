@@ -35,7 +35,6 @@ Use this app to integrate Flask and Stripe with a simple user registration syste
 
 ## Screenshot
 
-![djang-stripe](http://content.screencast.com/users/Mike_Extentech/folders/Jing/media/754f9275-d5e4-4aa9-bfcf-a0f6fbebf63b/00000211.png)
 
 ## Project structure
 
