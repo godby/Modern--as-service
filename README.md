@@ -34,7 +34,7 @@ Use this app to integrate Flask and Stripe with a simple user registration syste
 5. create a payment form instead of the generic stripe popup
 
 ## Screenshot
-
+![image](/screenshots/1.png)
 
 ## Project structure
 
